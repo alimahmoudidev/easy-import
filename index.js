@@ -38,7 +38,7 @@ async function readAllFile(path) {
               readNext();
             });
           } else {
-            list.push(filePath);
+            list.push(removeFirstSrc(filePath));
             readNext();
           }
         });
@@ -78,16 +78,20 @@ function createFileText(objFile) {
       arryImport.push(`import ${key} from '${objFile[key]}'`);
     }
   }
-  const objExport = Object.keys(objFile)
-  let obj = "{"
-  objExport.forEach(key=>{
-    obj+=`${key},`
-  })
-  obj+="}"
+  const objExport = Object.keys(objFile);
+  let obj = "{";
+  objExport.forEach((key) => {
+    obj += `${key},`;
+  });
+  obj += "}";
   console.log(obj);
   arryImport.push(`const img = ${obj}`);
   arryImport.push("export default img");
   return arryImport;
+}
+
+function removeFirstSrc(fileSrc) {
+  return `.${fileSrc.split(address)[1]}`;
 }
 
 // Delete
