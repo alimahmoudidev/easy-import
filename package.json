@@ -1,0 +1,27 @@
+{
+  "name": "easy-import-assets",
+  "version": "0.0.1",
+  "description": "Import all the content inside the directory assets",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alimahmoudidev/easy-import.git"
+  },
+  "keywords": [
+    "react",
+    "import",
+    "assets"
+  ],
+  "author": "AliMahmoudiDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alimahmoudidev/easy-import/issues"
+  },
+  "homepage": "https://github.com/alimahmoudidev/easy-import#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
