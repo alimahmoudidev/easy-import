@@ -25,6 +25,7 @@ To easily and quickly import files into the React project
 ```
 
 ![Logo](./imgs/img2.png)
+
 A file called index.js is created in the  **src/assets/imgs**, which imports all the files in the folder
 
 You can access all the files in the folder by importing object imgs from the **src/assets/imgsindex.js** file
