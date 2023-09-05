@@ -1,6 +1,6 @@
 {
   "name": "easy-import-imgs",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "To easily and quickly import files into the React project",
   "main": "index.js",
   "type": "module",
