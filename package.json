@@ -4,7 +4,9 @@
   "description": "To easily and quickly import files into the React project",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "easy-import" : "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alimahmoudidev/easy-import.git"
