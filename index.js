@@ -1,6 +1,8 @@
 import fs from "fs";
+import chalk from "chalk";
 
-const address = process.argv[2];
+const address = process.argv[2] || "./src/assets/imgs";
+const nameObjct = process.argv[3] || "img";
 const addressFileIndex = `${address}/index.js`;
 
 // Delete Old File Created
@@ -14,7 +16,7 @@ function deletePreviousFile(addressFileIndex) {
       }
       return;
     }
-    console.log("Delete the previous file");
+    console.log(chalk.bgRedBright("Delete the previous file"));
   });
 }
 
@@ -84,9 +86,8 @@ function createFileText(objFile) {
     obj += `${key},`;
   });
   obj += "}";
-  console.log(obj);
-  arryImport.push(`const img = ${obj}`);
-  arryImport.push("export default img");
+  arryImport.push(`const ${nameObjct} = ${obj}`);
+  arryImport.push(`export default ${nameObjct}`);
   return arryImport;
 }
 
@@ -120,6 +121,7 @@ readAllFile(address)
           console.log(err);
           return;
         }
+        console.log(chalk.green(`-> ${line}`));
       });
     });
   });
